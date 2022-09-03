@@ -44,11 +44,12 @@ th{
     font-size: 1.6rem;
     padding: 0.5rem;
     text-align: left;
+    word-wrap: none;
 }
 td{
     /* overflow: hidden;  */
     /* text-overflow: ellipsis; */
-    /* word-wrap: break-word; */
+    
     font-size: 1.4rem;
     padding: 1rem 0.5rem;
     text-align: left;
