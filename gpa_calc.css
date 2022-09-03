@@ -41,9 +41,6 @@ input{
 table{
     width: 100%;
     margin: 5rem 0 2rem 0;
-    /* table-layout: fixed; */
-    /* overflow-x: auto; */
-    /* display: block; */
 }
 th{
     font-size: 1.6rem;
@@ -51,9 +48,6 @@ th{
     white-space: nowrap;
 }
 td{
-    /* overflow: hidden;  */
-    /* text-overflow: ellipsis; */
-    
     font-size: 1.4rem;
     padding: 1rem;
 }
