@@ -42,7 +42,7 @@ table{
 }
 th{
     font-size: 1.6rem;
-    padding: 0.5rem;
+    padding: 1rem;
     text-align: left;
     word-wrap: nowrap;
 }
@@ -51,7 +51,7 @@ td{
     /* text-overflow: ellipsis; */
     
     font-size: 1.4rem;
-    padding: 1rem 0.5rem;
+    padding: 1rem;
     text-align: left;
 }
 .cancel>img{
