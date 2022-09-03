@@ -35,6 +35,9 @@ input{
     padding: 0 2rem;
     overflow-x: auto;
 }
+#table-container::-webkit-scrollbar {
+    display: none;
+  }
 table{
     width: 100%;
     margin: 5rem 0 2rem 0;
@@ -44,7 +47,7 @@ table{
 }
 th{
     font-size: 1.6rem;
-    padding: 1rem;
+    padding: 1rem 2rem;
     white-space: nowrap;
 }
 td{
