@@ -1,0 +1,52 @@
+*{
+    font-family: Cabin;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+    text-align: center;
+}
+
+header{
+    padding: 2rem;
+}
+header>img{
+    width: 5rem;
+}
+h1{
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+p{
+    font-size: 1.4rem;
+}
+form{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+input{
+    width: 80%;
+    padding: 1rem;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+table{
+    width: 80%;
+    margin: 5rem auto 2rem auto;
+}
+th{
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+}
+td{
+    font-size: 1.4rem;
+    padding: 1rem;
+}
+.cancel>img{
+    width: 1.2rem;
+}
+button{
+    padding: 1rem 2rem;
+    font-size:1.5rem;
+}

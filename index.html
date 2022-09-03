@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA Calculator</title>
+    <link rel="stylesheet" href="gpa_calc.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin">
+</head>
+<body>
+    <header>
+        <img src="images/Logo.png" alt="logo" />
+        <h1>GPA Calculator</h1>
+    </header>
+    <p>Calculate your semester GPA, session GPA and Cummulative GPA</p>
+    <form>
+        <input type="text" id="course-title" name="course-title" placeholder="Course Title" /><br>
+        <input type="number" id="course-unit" name="course-unit" placeholder="Course Unit" /><br>
+        <input type="number" id="course-score" name="course-score" placeholder="Score" /><br>
+        <input type="submit" id="submit-btn" value="Add" />
+    </form>
+    <button id="calc-gpa-btn">Calculate GPA</button>
+    <table>
+         <tr>
+            <th>Course Title</th>
+            <th>Course Unit</th>
+            <th>Score</th>
+            <th>Point</th>
+            <th>Grade</th>
+            <th></th>
+        </tr>
+        <!-- <tr>
+            <td>MAT 353</td>
+            <td>4</td>
+            <td>99</td>
+            <td>16</td>
+            <td>A</td>
+            <td class="cancel"><img class="cancel-icon" src="images/close.svg" alt="cancel" /></td>
+        </tr> -->
+    </table>
+    <button id="clear-btn">Clear All</button>
+<script src="gpa_calc.js"></script>
+</body>
+</html>
