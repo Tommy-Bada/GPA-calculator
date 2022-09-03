@@ -30,18 +30,28 @@ input{
     font-size: 1.6rem;
     margin-bottom: 1rem;
 }
-
+#table-container{
+    padding: 0 2rem;
+}
 table{
     width: 100%;
-    margin: 5rem 2rem 2rem 2rem;
+    margin: 5rem 0 2rem 0;
+    /* table-layout: fixed; */
+    /* overflow-x: auto; */
+    /* display: block; */
 }
 th{
     font-size: 1.6rem;
-    padding: 1rem 2rem;
+    padding: 0.5rem;
+    text-align: left;
 }
 td{
+    /* overflow: hidden;  */
+    /* text-overflow: ellipsis; */
+    /* word-wrap: break-word; */
     font-size: 1.4rem;
-    padding: 1rem;
+    padding: 1rem 0.5rem;
+    text-align: left;
 }
 .cancel>img{
     width: 1.2rem;

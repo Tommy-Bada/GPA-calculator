@@ -74,7 +74,7 @@ class LocalStorage{
 
 // Input Events
 document.querySelector("#course-unit").addEventListener("blur", function(e){
-    if(Number(e.target.value) > 4 || Number(e.target.value) < 1 ){
+    if(Number(e.target.value) > 6 || Number(e.target.value) < 1 ){
         alert("your course unit is out of range");
         e.target.value = "";
     }
