@@ -139,8 +139,8 @@ document.querySelector("table").addEventListener("click", function(e){
     if(e.target.classList.contains("cancel-icon")){
         e.target.parentElement.parentElement.remove()
 
-        totalUnits-Number(e.target.parentElement.parentElement.firstElementChild.nextElementSibling.textContent)
-        totalPoints-Number(e.target.parentElement.parentElement.lastElementChild.previousElementSibling.previousElementSibling.textContent)
+        totalUnits -= Number(e.target.parentElement.parentElement.firstElementChild.nextElementSibling.textContent)
+        totalPoints -= Number(e.target.parentElement.parentElement.lastElementChild.previousElementSibling.previousElementSibling.textContent)
 
         removeFromLocalStorage = new LocalStorage()
         removeFromLocalStorage.removeInLS(e.target.parentElement.parentElement)
