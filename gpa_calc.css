@@ -44,7 +44,7 @@ th{
     font-size: 1.6rem;
     padding: 0.5rem;
     text-align: left;
-    word-wrap: none;
+    word-wrap: nowrap;
 }
 td{
     /* overflow: hidden;  */
