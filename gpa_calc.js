@@ -166,7 +166,7 @@ document.querySelector("#clear-btn").addEventListener("click", function(){
 
 //Calculate GP Event
 document.querySelector("#calc-gpa-btn").addEventListener("click", function(){
-    if(totalUnits = 0 ){
+    if(totalUnits === 0 ){
         alert("Nothing to calculate")
     }else{
     alert((totalPoints/totalUnits).toFixed(2))
