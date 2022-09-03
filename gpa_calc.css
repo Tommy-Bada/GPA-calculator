@@ -33,7 +33,7 @@ input{
 }
 #table-container{
     padding: 0 2rem;
-    overflow-y: auto;
+    overflow-x: auto;
 }
 table{
     width: 100%;
