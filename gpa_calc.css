@@ -32,7 +32,9 @@ input{
     margin-bottom: 1rem;
 }
 #table-container{
-    width: 80%;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    width: 100%;
     overflow-x: auto;
 }
 #table-container::-webkit-scrollbar {
