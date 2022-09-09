@@ -171,9 +171,8 @@ document.querySelector("#calc-gpa-btn").addEventListener("click", function(){
     }else{
         // document.querySelector("#result").textContent = (totalPoints/totalUnits).toFixed(2)
         new Toast({
-            message: `Your GPA is ${(totalPoints/totalUnits).toFixed(2)}`,
-            type: 'danger'      
-    });
+            message: `Your GPA is ${(totalPoints/totalUnits).toFixed(2)}`     
+        });
     }
 })
 
