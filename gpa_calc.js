@@ -74,7 +74,7 @@ class LocalStorage{
 
 // Input Events
 document.querySelector("#course-unit").addEventListener("blur", function(e){
-    if(Number(e.target.value) > 6 || Number(e.target.value) < 1 ){
+    if(Number(e.target.value) > 6 || Number(e.target.value) < 0 ){
         alert("your course unit is out of range");
         e.target.value = "";
     }
@@ -169,7 +169,11 @@ document.querySelector("#calc-gpa-btn").addEventListener("click", function(){
     if(totalUnits === 0 ){
         alert("Nothing to calculate")
     }else{
-    alert((totalPoints/totalUnits).toFixed(2))
+        // document.querySelector("#result").textContent = (totalPoints/totalUnits).toFixed(2)
+        new Toast({
+            message: `Your GPA is ${(totalPoints/totalUnits).toFixed(2)}`,
+            type: 'danger'      
+    });
     }
 })
 

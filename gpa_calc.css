@@ -9,6 +9,9 @@
 
 header{
     padding: 2rem;
+    height: 15vh;
+    margin-bottom: 2rem;
+    text-align: center;
 }
 header>img{
     width: 5rem;
@@ -17,24 +20,42 @@ h1{
     font-size: 1.8rem;
     margin-bottom: 1rem;
 }
-p{
-    font-size: 1.4rem;
-    margin: 0 2rem;
+.toastjs-container {
+	bottom: 0;
+    top: 20vh;
+	left: 10%;
+	width: calc(100% - 60px);
+
+}
+.toastjs{
+    font-size: 2rem;
 }
 form{
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin: 2rem;
 }
-input{
+#course-title, #course-unit, #course-score{
     width: 80%;
     padding: 1rem;
     font-size: 1.6rem;
-    margin-bottom: 1rem;
+    border: none;
+    border-bottom: 1px solid grey;
+    text-align: left;
+}
+#submit-btn{
+    width: 80%;
+    font-size: 1.6rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    border: none;
+    background: #35ace5 ;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: white;
+    /* background-image: linear-gradient( 135deg, #35ace5, #d36deb, #f9917a ); */
+    border-radius: 10px;
 }
 #table-container{
-    margin-left: 2rem;
-    margin-right: 2rem;
-    width: 100%;
+    margin:2rem auto;
+    width: 90%;
     overflow-x: auto;
 }
 #table-container::-webkit-scrollbar {
@@ -46,17 +67,38 @@ table{
 }
 th{
     font-size: 1.6rem;
-    padding: 1rem 2rem;
+    padding: 1rem;
     white-space: nowrap;
+    text-align: left;
 }
 td{
     font-size: 1.4rem;
     padding: 1rem;
+    text-align: left;
+    white-space: nowrap;
 }
 .cancel>img{
     width: 1.2rem;
 }
-button{
-    padding: 1rem 2rem;
-    font-size:1.5rem;
+#clear-btn{
+    background: #f9917a ;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: white;
+    /* background-image: linear-gradient( 135deg, #35ace5, #d36deb, #f9917a ); */
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 5rem;
+    font-size: 1.5rem;
+    padding: 1rem 4rem;
+
+}
+#calc-gpa-btn{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: white;
+    background-image: linear-gradient( 135deg, #35ace5, #d36deb, #f9917a );
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 5rem;
+    font-size: 1.5rem;
+    padding: 1rem 4rem;
 }
