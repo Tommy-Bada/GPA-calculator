@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GPA Calculator</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin">
-    <link rel="stylesheet" href="Toast.css">
+    <link rel="stylesheet" href="Toast.min.css">
     <link rel="stylesheet" href="gpa_calc.css">
 </head>
 <body>
@@ -13,13 +13,18 @@
         <img src="images/Logo.png" alt="logo" />
         <h1>GPA Calculator</h1>
     </header>
+    <button id="calc-gpa-btn">Calculate GPA</button>
     <form>
+        <div class="lds-spinner">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        </div>
+        <div>
         <input type="text" id="course-title" name="course-title" placeholder="Course Title" /><br>
         <input type="number" id="course-unit" name="course-unit" placeholder="Course Unit" /><br>
         <input type="number" id="course-score" name="course-score" placeholder="Score" /><br>
         <input type="submit" id="submit-btn" value="Add" />
+        </div>
     </form>
-    <button id="calc-gpa-btn">Calculate GPA</button>
     <div id="table-container">
         <table>
             <tr>
@@ -33,7 +38,7 @@
         </table>
     </div>
     <button id="clear-btn">Clear All</button>
-<script src="Toast.js"></script>
+<script src="Toast.min.js"></script>
 <script src="gpa_calc.js"></script>
 </body>
 </html>

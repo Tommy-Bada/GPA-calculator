@@ -89,49 +89,67 @@ document.querySelector("#course-score").addEventListener("blur", function(e){
 })
 
 //Submit Event
+function addStuff(){
+    let title = document.querySelector("#course-title").value;
+    let unit = Number(document.querySelector("#course-unit").value);
+    let score = Number(document.querySelector("#course-score").value);
+    let point;
+    let grade;
+
+    if(score >= 0 && score < 45){
+        point = 0*unit;
+        grade = "F"
+    }
+    if(score >= 45 && score < 50){
+        point = 1*unit;
+        grade = "D"
+    }
+    if(score >= 50 && score < 60){
+        point = 2*unit;
+        grade = "C"
+    }
+    if(score >= 60 && score < 70){
+        point = 3*unit;
+        grade = "B"
+    }
+    if(score >= 70 && score <= 100){
+        point = 4*unit;
+        grade = "A"
+    }
+
+    courseDetails = new CourseDetails(title, unit, score, point, grade)
+    regLocalStorage = new LocalStorage()
+    
+    courseDetails.addDetailstoTable()
+    courseDetails.clearInput()
+    courseDetails.sumUpUnits()
+    courseDetails.sumUpPoints()
+    regLocalStorage.storeInLS(courseDetails)
+
+    document.getElementsByClassName("lds-spinner")[0].style.display = "none"
+    document.querySelector("#course-title").style.display = "block"
+    document.querySelector("#course-unit").style.display = "block"
+    document.querySelector("#course-score").style.display = "block"
+
+}
+
 document.querySelector("form").addEventListener("submit", function(e){
- let title = document.querySelector("#course-title").value;
- let unit = Number(document.querySelector("#course-unit").value);
- let score = Number(document.querySelector("#course-score").value);
- let point;
- let grade;
+    let title = document.querySelector("#course-title").value;
+    let unit = Number(document.querySelector("#course-unit").value);
+    let score = Number(document.querySelector("#course-score").value);
+    let point;
+    let grade;
 
    if( title === "" || document.querySelector("#course-unit").value === "" || document.querySelector("#course-score").value === ""){
         alert("Please complete your input");
    }else{
-
-        if(score >= 0 && score < 45){
-            point = 0*unit;
-            grade = "F"
-        }
-        if(score >= 45 && score < 50){
-            point = 1*unit;
-            grade = "D"
-        }
-        if(score >= 50 && score < 60){
-            point = 2*unit;
-            grade = "C"
-        }
-        if(score >= 60 && score < 70){
-            point = 3*unit;
-            grade = "B"
-        }
-        if(score >= 70 && score <= 100){
-            point = 4*unit;
-            grade = "A"
-        }
-
-        courseDetails = new CourseDetails(title, unit, score, point, grade)
-        regLocalStorage = new LocalStorage()
-        
-        courseDetails.addDetailstoTable()
-        courseDetails.clearInput()
-        courseDetails.sumUpUnits()
-        courseDetails.sumUpPoints()
-        regLocalStorage.storeInLS(courseDetails)
-    
+       document.getElementsByClassName("lds-spinner")[0].style.display = "inline-block"
+       document.querySelector("#course-title").style.display = "none"
+       document.querySelector("#course-unit").style.display = "none"
+       document.querySelector("#course-score").style.display = "none"
+       setTimeout(addStuff, 1000);
    }
- e.preventDefault()
+   e.preventDefault()
 })
 
 //Delete event
@@ -167,12 +185,30 @@ document.querySelector("#clear-btn").addEventListener("click", function(){
 //Calculate GP Event
 document.querySelector("#calc-gpa-btn").addEventListener("click", function(){
     if(totalUnits === 0 ){
-        alert("Nothing to calculate")
+        new Toast({
+            message: 'Please enter your course details'  
+        });
     }else{
         // document.querySelector("#result").textContent = (totalPoints/totalUnits).toFixed(2)
-        new Toast({
-            message: `Your GPA is ${(totalPoints/totalUnits).toFixed(2)}`     
-        });
+        if ((totalPoints/totalUnits).toFixed(2) >= 3){
+            new Toast({
+                message: 'Your GPA is ' + (totalPoints/totalUnits).toFixed(2),
+                type: "success"
+            });
+        }
+        if ((totalPoints/totalUnits).toFixed(2) >= 2 && (totalPoints/totalUnits).toFixed(2) < 3){
+            new Toast({
+                message: 'Your GPA is ' + (totalPoints/totalUnits).toFixed(2),
+                type: "warning"
+            });
+        }
+        if ((totalPoints/totalUnits).toFixed(2) >= 0 && (totalPoints/totalUnits).toFixed(2) <= 2){
+            new Toast({
+                message: 'Your GPA is ' + (totalPoints/totalUnits).toFixed(2),
+                type: "danger"
+            });
+        }
+
     }
 })
 
