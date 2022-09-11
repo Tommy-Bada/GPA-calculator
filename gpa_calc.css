@@ -36,7 +36,6 @@ form{
     font-size: 1.6rem;
     border: none;
     border-bottom: 1px solid grey;
-    text-align: left;
 }
 
 /* Loading animation */
@@ -147,13 +146,12 @@ th{
     font-size: 1.6rem;
     padding: 1rem;
     white-space: nowrap;
-    text-align: left;
+
     color: #f9917a;
 }
 td{
     font-size: 1.4rem;
     padding: 1rem;
-    text-align: left;
     white-space: nowrap;
 }
 .cancel>img{
@@ -163,7 +161,6 @@ td{
     background: #f9917a ;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     color: white;
-    /* background-image: linear-gradient( 135deg, #35ace5, #d36deb, #f9917a ); */
     border-radius: 10px;
     border: none;
     margin-bottom: 5rem;
