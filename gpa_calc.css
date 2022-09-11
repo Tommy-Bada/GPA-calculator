@@ -60,7 +60,7 @@ form{
     width: 5px;
     height: 14px;
     border-radius: 20%;
-    background: #35ace5;
+    background: #f9917a;
   }
   .lds-spinner div:nth-child(1) {
     transform: rotate(0deg);
@@ -125,7 +125,7 @@ form{
     padding: 1rem;
     margin-top: 0;
     border: none;
-    background: #35ace5 ;
+    background: #f9917a ;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     color: white;
     /* background-image: linear-gradient( 135deg, #35ace5, #d36deb, #f9917a ); */
@@ -175,8 +175,7 @@ td{
 #calc-gpa-btn{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     color: white;
-    /* background-image: linear-gradient( 135deg, #35ace5, #f9917a ); */
-    background:  #f9917a;
+    background:  #35ace5;
     border-radius: 10px;
     border: none;
     margin-bottom: 5rem;
